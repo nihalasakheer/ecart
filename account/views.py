@@ -39,10 +39,13 @@ def login(request):
          User = auth.authenticate(username=username,password=password)
          if User is not None:
              auth.login(request, User)
-             return render(request, 'shop.html')
+             return render(request, 'my_account.html')
          else:
              messages.info(request, 'invalid credential') 
              return redirect('login')   
 
      else:
         return render(request, 'login.html')
+
+def my_account(request):
+    return render(request, 'my_account.html')

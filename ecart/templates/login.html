@@ -105,6 +105,28 @@
     <!-- End Main Top -->
     
            <br>
+          
+       <form method="POST">
+        {% csrf_token %}
+           <div class="text-center">
+             <input type="text" name="username" placeholder="username">
+            </div><br>
+            <div class="text-center">
+             <input type="text" name="password" placeholder="password">
+            </div><br>
+            <div class=" text-center">
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </div>
+        <div>
+        {% for message in messages %}
+          <h3> {{message}}</h3>
+        {% endfor %}
+       </div>
+
+
+      </form>
+      <br>
+
             <!-- Start Instagram Feed  -->
        <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">

@@ -49,3 +49,7 @@ def login(request):
 
 def my_account(request):
     return render(request, 'my_account.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')  

@@ -30,4 +30,10 @@ def shop(request):
 
     return render(request, 'shop.html', {'mats':mats})
 
+def cart(request):
+    return render(request, 'cart.html')    
+
+def wishlist(request):
+    return render(request, 'wishlist.html')      
+
  

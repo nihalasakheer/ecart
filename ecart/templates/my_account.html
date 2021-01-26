@@ -103,8 +103,16 @@
 							{% if user.is_authenticated %}
                             <li class="nav-item  active"><a class="nav-link">Welcome {{user.first_name}}</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                            <li class="dropdown">
+                            <a href="{% url 'shop' %}" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'login' %}">Cart</a></li>
+                                <li><a href="{% url 'login' %}">My Account</a></li>
+                                <li><a href="{% url 'login' %}">Wishlist</a></li>
+                            </ul>
+                        </li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Wishlist</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Cart</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'cart' %}">Cart</a></li>
 							<li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">logout</a></li>
 							{% else %}
                             <li><a href="{% url 'register' %}">Register</a></li>
